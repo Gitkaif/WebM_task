@@ -1,34 +1,82 @@
 import React from 'react';
-import hero from '../assets/hero.png';
+import heroo from '../assets/heroo.png';
+import hero2 from '../assets/hero2.png';
 
 function Hero() {
   return (
-    <section className="bg-gray-50">
-      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between mt-20">
-        {/* Left Content */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-gray-800 leading-tight mb-6 break-words">
-            Tailor-Made Travel Experiences Across the UK and Beyond
-          </h1>
-          <p className="text-gray-600 text-lg mb-8 break-words">
-            At Roamigo, we combine local insight with global reach.
-            As UK destination specialists, we craft immersive experiences across England, Scotland, Wales, and Northern Ireland — from luxury getaways to heritage tours.
-            We also bring the same level of care and customization to domestic travel within India, helping you discover hidden gems, heritage cities, and breathtaking landscapes
-          </p>
-          <div className="flex space-x-4">
-            <button className="border border-green-700 text-green-700 px-6 py-3 rounded-md hover:bg-green-50" onClick={() => window.location.href = '#contact'}>
-              Contact Us Today
-            </button>
+    <>
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden bg-white mt-6 min-h-[600px]">
+        <div className="w-full px-4 sm:px-6 md:px-8 py-8 h-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center h-full">
+            
+            {/* Left block */}
+            <div className="order-2 lg:order-1 mx-auto lg:ml-16 xl:ml-24 text-center lg:text-left">
+              <p className="text-slate-900 font-extrabold tracking-tighter leading-none mb-2 text-3xl sm:text-5xl md:text-6xl">
+                YEP, IT'S
+              </p>
+              <h1 className="text-slate-900 font-extrabold tracking-tighter leading-none mb-6 text-4xl sm:text-7xl md:text-8xl">
+                ALL IN ONE APP
+              </h1>
+              <p className="text-slate-700 text-lg sm:text-xl md:text-2xl tracking-tight max-w-2xl mb-8">
+                Invest in thousands of stocks, crypto, ETFs... all in one<br className="hidden sm:block"/>
+                easy-to-use app
+              </p>
+              <button className="w-full sm:w-auto flex items-center justify-center rounded-full bg-[#00c805] text-white font-semibold px-6 sm:px-8 md:px-12 py-3 text-base sm:text-lg shadow-sm hover:brightness-95 transition">
+                Join eToro
+              </button>
+            </div>
+
+            {/* Right block */}
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img
+                src={heroo}
+                alt="Hero"
+                className="w-full max-w-[600px] md:max-w-[700px] lg:max-w-[800px] rounded-2xl object-cover shadow-lg"
+              />
+            </div>
+          </div>
+
+          {/* Footnote */}
+          <div className="mt-6 text-center lg:text-right">
+            <p className="text-slate-600 text-sm sm:text-base underline font-bold mr-10">
+              **Terms and Conditions apply.
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* Right Image Placeholder */}
-        <div className="md:w-1/2 flex justify-center">
-          <img src={hero} alt="Explore the United Kingdom" className="rounded-lg shadow-lg max-w-full h-auto" />
+      {/* AI Reveal Section */}
+      <section className="relative w-full bg-[#0b0f12] text-white py-16">
+        <div className="w-full px-6 md:px-12 lg:px-20">
+          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-20">
+            
+            {/* Left copy */}
+            <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <p className="text-sm tracking-wider mb-2 text-xl">eToro Unlocked</p>
+              <h2 className="font-extrabold leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl">
+                Redefining Investing 
+                <span className="text-[#00c805]"> with the Power of AI</span>
+              </h2>
+              <button className="inline-flex mt-6 h-12 w-48 items-center justify-center rounded-full border border-[#00c805] text-[#00c805] px-5 py-2 font-semibold hover:bg-[#00c805] hover:text-[#0b0f12] transition">
+                See the reveal
+              </button>
+            </div>
+
+            {/* Right image */}
+            <div className="order-1 lg:order-2 relative flex justify-center">
+              <div className="absolute inset-0 blur-3xl opacity-30 bg-[#00c805] rounded-full max-w-[400px] -z-10 mx-auto" />
+              <img
+                src={hero2}
+                alt="AI Reveal"
+                className="w-full max-w-[460px] object-contain"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
-export default Hero; 
+export default Hero;
